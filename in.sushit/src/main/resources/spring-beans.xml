@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="debit" class="in.sushit.DebitCardPayment"></bean>
+    <bean id="credit" class="in.sushit.CreditCardPayment"></bean>
+    <bean id="payment" class="in.sushit.Payment">
+		<constructor-arg name="payment" ref="credit"></constructor-arg>
+	</bean>
+    <bean id="upi" class="in.sushit.UPIPayment"></bean>
+    <bean id="sudoku" class="in.sushit.SodekuPayment"></bean>
+    <bean id="test" class="in.sushit.Test"></bean>
+
+</beans>
